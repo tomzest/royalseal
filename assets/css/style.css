@@ -41,3 +41,83 @@ body{background:#0b0b0b;color:#fff;font-family:Montserrat,sans-serif}
   font-weight: 600;
   letter-spacing: 1px;
 }
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  z-index: 1000;
+  border-bottom: 1px solid #222;
+}
+
+.nav-logo {
+  color: #c9a44c;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.nav-links a {
+  color: #fff;
+  margin-left: 25px;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #c9a44c;
+}
+
+/* HERO */
+.hero {
+  margin-top: 100px;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero-logo {
+  width: 160px;
+  margin-bottom: 20px;
+}
+
+.slogan {
+  color: #b30000;
+  font-weight: 600;
+}
+
+/* ABOUT */
+.about {
+  max-width: 700px;
+  margin: 80px auto;
+  text-align: center;
+}
+
+.about h2 {
+  color: #c9a44c;
+}
+
+/* QUICK LINKS */
+.quick {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.quick a {
+  padding: 12px 25px;
+  border: 1px solid #c9a44c;
+  color: #c9a44c;
+  text-decoration: none;
+  border-radius: 25px;
+}
+
+.quick a:hover {
+  background: #c9a44c;
+  color: #000;
+}
+
