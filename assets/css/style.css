@@ -276,6 +276,11 @@ body::after {
     transform: translateY(10px) translateX(-10px) scale(1.08);
   }
 }
+@media (max-width: 768px) {
+  body::after {
+    display: none;
+  }
+}
 
 
 
