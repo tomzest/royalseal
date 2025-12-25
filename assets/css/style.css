@@ -200,4 +200,9 @@ body{background:#0b0b0b;color:#fff;font-family:Montserrat,sans-serif}
   height: 2px;
   background: #c9a44c;
 }
+/* FIX NAVBAR OVERLAY */
+body {
+  padding-top: 70px; /* chiều cao navbar */
+}
+
 
