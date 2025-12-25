@@ -3,12 +3,12 @@ body{background:#0b0b0b;color:#fff;font-family:Montserrat,sans-serif}
 .social-header{text-align:center;margin-bottom:20px}
 .social-header a{margin:0 10px;color:#c9a44c;text-decoration:none;font-weight:600}
 
-.team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px;padding:40px}
-.member-card{background:#111;border:1px solid #222;border-radius:14px;padding:20px;text-align:center;transition:.3s;cursor:pointer}
+.team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;padding:40px}
+.member-card{background:#111;border:1px solid #222;border-radius:14px;padding:16px;text-align:center;transition:.3s;cursor:pointer;max-width: 260px;margin: auto}
 .member-card:hover{border-color:#c9a44c;transform:translateY(-6px)}
-.member-card img{width:100%;border-radius:10px}
-.member-card h2{color:#c9a44c;margin:10px 0}
-.role{color:#b30000;font-weight:600}
+.member-card img{width:100%;height:260px;object-fit:cover;border-radius:10px}
+.member-card h2{font-size:18px;color:#c9a44c;margin:10px 0 4px}
+.role{color:#b30000;font-size:14px;font-weight:600}
 
 .news-list{max-width:800px;margin:0 auto;padding:20px}
 .news-item{background:#111;border-left:4px solid #b30000;padding:20px;margin-bottom:20px}
