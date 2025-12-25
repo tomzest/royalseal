@@ -143,5 +143,46 @@ body{background:#0b0b0b;color:#fff;font-family:Montserrat,sans-serif}
     gap: 12px;
   }
 }
+/* DISCORD ICON */
+.discord-icon img {
+  width: 18px;
+  height: 18px;
+  filter: brightness(0) invert(1);
+}
 
+.discord-icon:hover img {
+  filter: none;
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  
+  .nav-links {
+    position: absolute;
+    top: 56px;
+    left: 0;
+    width: 100%;
+    background: #000;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 24px;
+    gap: 12px;
+    display: none; /* 👈 ẩn mặc định */
+  }
+
+  .nav-links.show {
+    display: flex; /* 👈 bật khi click ☰ */
+  }
+}
 
