@@ -204,5 +204,18 @@ body{background:#0b0b0b;color:#fff;font-family:Montserrat,sans-serif}
 body {
   padding-top: 70px; /* chiều cao navbar */
 }
+/* GLOBAL BACKGROUND */
+body {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.85),
+      rgba(0, 0, 0, 0.95)
+    ),
+    url("../img/bg/royalseal-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
 
 
