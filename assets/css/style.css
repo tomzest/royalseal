@@ -46,26 +46,36 @@ body{background:#0b0b0b;color:#fff;font-family:Montserrat,sans-serif}
 .navbar {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   background: #000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
+  padding: 12px 24px;   /* 👈 giảm padding */
   z-index: 1000;
   border-bottom: 1px solid #222;
+  box-sizing: border-box;
 }
 
 .nav-logo {
   color: #c9a44c;
   font-weight: bold;
   letter-spacing: 2px;
+  white-space: nowrap; /* 👈 không bị xuống dòng */
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;            /* 👈 thay vì margin-left */
+  flex-wrap: wrap;     /* 👈 CHỐNG TRÀN */
 }
 
 .nav-links a {
   color: #fff;
-  margin-left: 25px;
   text-decoration: none;
+  font-size: 14px;     /* 👈 nhỏ lại chút */
+  white-space: nowrap;
 }
 
 .nav-links a:hover {
