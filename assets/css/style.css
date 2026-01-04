@@ -97,8 +97,10 @@ body::after {
 }
 
 .page-home .hero-logo{
-  width: 160px;
-  margin-bottom: 20px;
+  width: 90px;
+  max-width: 28vw;     /* responsive */
+  margin: 0 auto 20px; /* căn giữa */
+  display: block;
 }
 
 .slogan {
