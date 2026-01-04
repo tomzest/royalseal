@@ -527,6 +527,16 @@ html{
   pointer-events: none;
 }
 
+.product img{
+  pointer-events: none; /* CHỐT LỖI */
+}
+
+.product .btn,
+.product button{
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+}
 
 
 
