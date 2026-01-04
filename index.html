@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<link rel="icon" href="assets/img/logo/favicon.png">
-<meta charset="UTF-8">
-<title>Royal Seal Esports</title>
-<link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/img/logo/favicon.png">
+  <meta charset="UTF-8">
+  <title>Royal Seal Esports</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
 
 <!-- NAVBAR -->
@@ -36,160 +37,66 @@
     Chúng tôi không tìm kiếm sự nổi tiếng – chúng tôi xây dựng chiến thắng.
   </p>
 </section>
-  
-<!-- ORDER MODAL -->
-<div id="orderModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeOrder()">×</span>
-
-    <h3>XÁC NHẬN ĐẶT HÀNG</h3>
-
-    <div class="order-section">
-      <label>Sản phẩm</label>
-      <input type="text" id="productName" readonly>
-    </div>
-
-    <div class="order-section">
-      <label>Nhập mã giảm giá</label>
-      <div class="discount-box">
-        <input type="text" placeholder="NHẬP MÃ GIẢM GIÁ">
-        <button>Áp dụng</button>
-      </div>
-    </div>
-
-    <div class="order-total">
-      Tổng thanh toán: <strong id="productPrice">0đ</strong>
-    </div>
-
-    <div class="order-section">
-      <label>Tên người nhận</label>
-      <input type="text" placeholder="Tên người nhận">
-    </div>
-
-    <div class="order-section">
-      <label>Số điện thoại</label>
-      <input type="text" placeholder="Số điện thoại">
-    </div>
-
-    <div class="order-section">
-      <label>Địa chỉ</label>
-      <input type="text" placeholder="Địa chỉ">
-    </div>
-
-    <button class="confirm-btn">XÁC NHẬN ĐẶT HÀNG</button>
-  </div>
-</div>
-
-<div id="orderModal" class="modal">
 
 <!-- SHOP KNIFE MODEL -->
-
 <section id="shop" class="shop-section">
   <div class="shop-header">
     <h2 class="section-title">KNIFE GAME MODELS</h2>
-    <p>
-      Mô hình dao lấy cảm hứng từ các tựa game FPS.
-      Phù hợp trưng bày, decor góc gaming.
-    </p>
+    <p>Mô hình dao lấy cảm hứng từ các tựa game FPS.</p>
   </div>
 
   <div class="grid">
-    
-    <!-- PRODUCT 1 -->
     <div class="card product">
       <span class="badge hot">HOT</span>
       <img src="assets/products/knife1.jpg">
       <h3>DF Desmoulins</h3>
       <p>Giá: 299.000đ</p>
-      <button class="btn btn-red" onclick="openOrder('DF Desmoulins','299.000đ')">ĐẶT HÀNG</button>
+      <button class="btn btn-red"
+        onclick="openOrder('DF Desmoulins','299.000đ')">
+        ĐẶT HÀNG
+      </button>
     </div>
-
-    <!-- PRODUCT 2 -->
-    <div class="card product">
-      <span class="badge hot">HOT</span>
-      <img src="assets/products/knife2.jpg">
-      <h3>DF Cobra</h3>
-      <p>Giá: 349.000đ</p>
-      <button class="btn btn-red" onclick="openOrder('DF Cobra','349.000đ')">ĐẶT HÀNG</button>
-    </div>
-
-    <!-- PRODUCT 3 -->
-    <div class="card product">
-      <span class="badge new">NEW</span>
-      <img src="assets/products/knife3.jpg">
-      <h3>DF Mercy</h3>
-      <p>Giá: 399.000đ</p>
-      <button class="btn btn-red" onclick="openOrder('DF Mercy','399.000đ')">ĐẶT HÀNG</button>
-    </div>
-
   </div>
 </section>
 
 <!-- SHOP MERCH -->
-
 <section id="merch" class="merch-section">
   <div class="merch-header">
     <h2 class="section-title">ROYAL SEAL MERCH</h2>
-    <p>
-      Áo thi đấu và áo thời trang mang phong cách Royal Seal.
-      Phù hợp đi chơi, thi đấu và fan merch.
-    </p>
+    <p>Áo thi đấu và áo thời trang mang phong cách Royal Seal.</p>
   </div>
 
   <div class="grid merch-grid">
-
-    <!-- ÁO 1 -->
     <div class="card product">
       <span class="badge hot">HOT</span>
       <img src="assets/merch/shirt1.jpg">
       <h3>Royal Seal Jersey – Black Red</h3>
       <p>Giá: 350.000đ</p>
-      <button class="btn btn-red" onclick="openOrder('Royal Seal Jersey – Black Red','350.000đ')">ĐẶT HÀNG</button>
+      <button class="btn btn-red"
+        onclick="openOrder('Royal Seal Jersey','350.000đ')">
+        ĐẶT HÀNG
+      </button>
     </div>
-
-    <!-- ÁO 2 -->
-    <div class="card product">
-      <span class="badge new">NEW</span>
-      <img src="assets/merch/shirt2.jpg">
-      <h3>Royal Seal Tee – Street</h3>
-      <p>Giá: 280.000đ</p>
-      <button class="btn btn-red" onclick="openOrder('Royal Seal Tee – Street','280.000đ')">ĐẶT HÀNG</button>
-    </div>
-
-    <!-- ÁO 3 -->
-    <div class="card product">
-      <span class="badge limited">LIMITED</span>
-      <img src="assets/merch/shirt3.jpg">
-      <h3>Royal Seal Jacket – Pro</h3>
-      <p>Giá: 520.000đ</p>
-      <button class="btn btn-red" onclick="openOrder('Royal Seal Jacket','520.000đ')">ĐẶT HÀNG</button>
-    </div>
-
   </div>
 </section>
+
 <!-- QUICK LINKS -->
 <section class="quick">
   <a href="team.html">Xem đội hình</a>
   <a href="news.html">Xem thông báo</a>
 </section>
-<script>
-function toggleMenu() {
-  document.getElementById("navLinks").classList.toggle("show");
-}
-</script>
-<script>
-const currentPage = window.location.pathname.split("/").pop();
 
-document.querySelectorAll(".nav-links a").forEach(link => {
-  const linkPage = link.getAttribute("href");
-  if (linkPage === currentPage) {
-    link.classList.add("active");
-  }
-});
-</script>
+<!-- ORDER MODAL -->
+<div id="orderModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeOrder()">×</span>
+    <h3>XÁC NHẬN ĐẶT HÀNG</h3>
+    <input id="productName" readonly>
+    <strong id="productPrice"></strong>
+  </div>
+</div>
 
 <script src="js/main.js"></script>
 
 </body>
 </html>
-
