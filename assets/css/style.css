@@ -538,5 +538,35 @@ html{
   cursor: pointer;
 }
 
+/* ==== FIX CLICK ABSOLUTE – HARD FIX ==== */
+
+/* Không cho bất kỳ overlay nào chặn click */
+.card::before,
+.card::after,
+.product::before,
+.product::after{
+  pointer-events: none !important;
+}
+
+/* Đảm bảo card cho phép click */
+.card,
+.product{
+  pointer-events: auto !important;
+}
+
+/* Ép nút ĐẶT HÀNG lên cao nhất */
+.product button,
+.product .btn{
+  position: relative;
+  z-index: 999 !important;
+  pointer-events: auto !important;
+  cursor: pointer;
+}
+
+/* Ảnh & badge không được chặn click */
+.product img,
+.badge{
+  pointer-events: none !important;
+}
 
 
