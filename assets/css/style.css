@@ -498,4 +498,25 @@ body::after {
     height: 200px;
   }
 }
+/* =================================================
+   TEAM PROFILE IMAGE FIX (ANTI FULLSCREEN)
+================================================= */
+
+/* khung ảnh */
+#profileModal .profile-image{
+  width: 100%;
+  max-width: 300px;
+  height: 360px;              /* 👈 chiều cao cố định */
+  margin: 0 auto 16px;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+/* ảnh bên trong */
+#profileModal .profile-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* 👈 CHỐT: không tràn */
+  display: block;
+}
 
