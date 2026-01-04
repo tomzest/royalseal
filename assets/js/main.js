@@ -13,17 +13,19 @@ card.innerHTML=`<img src="${m.image}">
 <p class="role">${m.role}</p>`;
 
 card.onclick=()=>{
-modalContent.innerHTML=`
-<img src="${m.image}">
-<h2>${m.nickname}</h2>
-<p class="role">${m.role}</p>
-<p>${m.description}</p>
-<a href="https://discord.gg/WCD9NFRvMc" target="_blank">Discord</a>
-<a href="https://www.facebook.com/share/17D86kMYNY/?mibextid=wwXIfr" target="_blank">Fanpage</a>
-<span class="close-btn">Đóng</span>`;
-modal.style.display='flex';
-modalContent.querySelector('.close-btn').onclick=()=>modal.style.display='none';
-};
+modalContent.innerHTML = `
+  <div class="profile-image">
+    <img src="${member.image}" alt="${member.name}">
+  </div>
+
+  <h2>${member.name}</h2>
+  <p class="role">${member.role}</p>
+
+  <a href="${member.discord}" target="_blank">Discord</a>
+  <a href="${member.fanpage}" target="_blank">Fanpage</a>
+
+  <span class="close-btn" onclick="closeProfile()">Đóng</span>
+`;
 g.appendChild(card);
 });
 });
