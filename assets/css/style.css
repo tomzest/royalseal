@@ -1,15 +1,15 @@
-/* =========================
-   RESET & GLOBAL
-========================= */
-*{
+/* =================================================
+   RESET & BASE
+================================================= */
+* {
   box-sizing: border-box;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
-body{
+body {
   margin: 0;
   font-family: Montserrat, Arial, sans-serif;
   color: #fff;
@@ -18,221 +18,220 @@ body{
     url("../img/bg/royalseal-bg.png") center / cover no-repeat fixed;
   overflow-x: hidden;
   padding-top: 70px; /* navbar height */
+  position: relative;
 }
 
-/* background smoke */
-body::after{
-  content:"";
+/* subtle background smoke */
+body::after {
+  content: "";
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(circle at 20% 30%, rgba(180,0,0,0.25), transparent 40%),
-    radial-gradient(circle at 80% 60%, rgba(255,60,0,0.18), transparent 45%);
+    radial-gradient(circle at 20% 30%, rgba(180,0,0,0.22), transparent 40%),
+    radial-gradient(circle at 80% 60%, rgba(255,60,0,0.16), transparent 45%);
   animation: royalSmoke 22s ease-in-out infinite alternate;
   pointer-events: none;
   z-index: -1;
 }
 
-@keyframes royalSmoke{
-  0%{transform:translate(0,0) scale(1)}
-  100%{transform:translate(-10px,10px) scale(1.08)}
+@keyframes royalSmoke {
+  0%   { transform: translate(0,0) scale(1); }
+  100% { transform: translate(-10px,10px) scale(1.08); }
 }
 
-/* =========================
+/* =================================================
    NAVBAR
-========================= */
-.navbar{
+================================================= */
+.navbar {
   position: fixed;
-  top:0; left:0;
-  width:100%;
-  height:70px;
-  background:#000;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:0 24px;
-  border-bottom:1px solid #222;
-  z-index:1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  border-bottom: 1px solid #222;
+  z-index: 1000;
 }
 
-.nav-logo{
-  color:#c9a44c;
-  font-weight:700;
-  letter-spacing:2px;
+.nav-logo {
+  color: #c9a44c;
+  font-weight: 700;
+  letter-spacing: 2px;
+  white-space: nowrap;
 }
 
-.nav-links{
-  display:flex;
-  gap:20px;
+.nav-links {
+  display: flex;
+  gap: 20px;
 }
 
-.nav-links a{
-  color:#fff;
-  text-decoration:none;
-  font-size:14px;
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
 }
 
 .nav-links a:hover,
-.nav-links a.active{
-  color:#c9a44c;
+.nav-links a.active {
+  color: #c9a44c;
 }
 
-/* =========================
-   SECTION BASE
-========================= */
-section{
-  max-width:1200px;
-  margin:40px auto;
-  padding:40px 20px;
-  background:rgba(0,0,0,0.6);
-  border-radius:16px;
+/* =================================================
+   PAGE: HOME (LANDING)
+================================================= */
+.page-home section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 40px 20px;
+  background: rgba(0,0,0,0.6);
+  border-radius: 16px;
 }
 
-/* =========================
-   HERO
-========================= */
-.hero{
-  text-align:center;
+/* HERO */
+.hero {
+  text-align: center;
 }
 
-.hero-logo{
-  width:160px;
-  margin-bottom:20px;
+.hero-logo {
+  width: 160px;
+  margin-bottom: 20px;
 }
 
-.slogan{
-  color:#b30000;
-  font-weight:600;
+.slogan {
+  color: #b30000;
+  font-weight: 600;
 }
 
-/* =========================
-   ABOUT
-========================= */
-.about{
-  text-align:center;
+/* ABOUT */
+.about {
+  text-align: center;
 }
 
-.about h2{
-  color:#c9a44c;
+.about h2 {
+  color: #c9a44c;
 }
 
-/* =========================
-   SHOP & MERCH COMMON
-========================= */
+/* =================================================
+   SHOP & MERCH (HOME ONLY)
+================================================= */
 .shop-section,
-.merch-section{
-  text-align:center;
+.merch-section {
+  text-align: center;
 }
 
 .shop-header,
-.merch-header{
-  max-width:900px;
-  margin:0 auto 40px;
+.merch-header {
+  max-width: 900px;
+  margin: 0 auto 40px;
 }
 
 .shop-header p,
-.merch-header p{
-  color:#b0b0b0;
-  line-height:1.6;
+.merch-header p {
+  color: #b0b0b0;
+  line-height: 1.6;
 }
 
-/* =========================
-   GRID PRODUCTS
-========================= */
-.grid{
-  display:grid;
-  gap:24px;
+/* =================================================
+   PRODUCT GRID
+================================================= */
+.grid {
+  display: grid;
+  gap: 24px;
 }
 
 #shop .grid,
-#merch .grid{
+#merch .grid {
   grid-template-columns: repeat(4, 1fr);
 }
 
-@media (max-width:1024px){
+@media (max-width: 1024px) {
   #shop .grid,
-  #merch .grid{
+  #merch .grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media (max-width:768px){
+@media (max-width: 768px) {
   #shop .grid,
-  #merch .grid{
+  #merch .grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width:480px){
+@media (max-width: 480px) {
   #shop .grid,
-  #merch .grid{
+  #merch .grid {
     grid-template-columns: 1fr;
   }
 }
 
-/* =========================
+/* =================================================
    PRODUCT CARD
-========================= */
-.card.product{
-  background:#111;
-  border:1px solid #222;
-  border-radius:14px;
-  padding:16px;
-  position:relative;
+================================================= */
+.card.product {
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 14px;
+  padding: 16px;
+  position: relative;
 }
 
-.card.product img{
-  width:100%;
-  height:200px;
-  object-fit:cover;
-  margin-bottom:10px;
+.card.product img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
 }
 
-.card.product h3{
-  margin:10px 0 6px;
+.card.product h3 {
+  margin: 10px 0 6px;
 }
 
-.card.product p{
-  margin-bottom:12px;
+.card.product p {
+  margin-bottom: 12px;
 }
 
 /* badge */
-.badge{
-  position:absolute;
-  top:12px;
-  left:12px;
-  padding:6px 10px;
-  font-size:12px;
-  font-weight:700;
-  border-radius:4px;
+.badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 4px;
 }
 
-.badge.hot{background:#b11226}
-.badge.new{background:#d4af37;color:#000}
-.badge.limited{background:#444}
+.badge.hot { background: #b11226; }
+.badge.new { background: #d4af37; color: #000; }
+.badge.limited { background: #444; }
 
 /* button */
-.btn{
-  padding:10px 16px;
-  border-radius:20px;
-  border:none;
-  cursor:pointer;
-  font-weight:600;
+.btn {
+  padding: 10px 16px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
 }
 
-.btn-red{
-  background:#b30000;
-  color:#fff;
+.btn-red {
+  background: #b30000;
+  color: #fff;
 }
 
-.btn-red:hover{
-  background:#d10000;
+.btn-red:hover {
+  background: #d10000;
 }
 
-/* =========================
-   MODAL
-========================= */
-.modal{
+/* =================================================
+   MODAL (ORDER)
+================================================= */
+.modal {
   display: none;
   position: fixed;
   inset: 0;
@@ -242,76 +241,109 @@ section{
   align-items: center;
 }
 
-.modal-content{
-  background:#111;
-  border:1px solid #c9a44c;
-  border-radius:14px;
-  width:90%;
-  max-width:420px;
-  padding:24px;
-  position:relative;
+.modal-content {
+  background: #111;
+  border: 1px solid #c9a44c;
+  border-radius: 14px;
+  width: 90%;
+  max-width: 420px;
+  padding: 24px;
+  position: relative;
 }
 
-.modal .close{
-  position:absolute;
-  top:10px;
-  right:14px;
-  font-size:22px;
-  cursor:pointer;
+.modal .close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 22px;
+  cursor: pointer;
 }
 
-.order-section{
-  margin-bottom:14px;
+.order-section {
+  margin-bottom: 14px;
 }
 
-.order-section label{
-  font-size:14px;
-  color:#aaa;
+.order-section label {
+  font-size: 14px;
+  color: #aaa;
 }
 
-.order-section input{
-  width:100%;
-  padding:10px;
-  background:#111;
-  border:1px solid #333;
-  color:#fff;
-  border-radius:6px;
+.order-section input {
+  width: 100%;
+  padding: 10px;
+  background: #111;
+  border: 1px solid #333;
+  color: #fff;
+  border-radius: 6px;
 }
 
-.order-total{
-  margin:14px 0;
-  color:#00ff9c;
+.order-total {
+  margin: 14px 0;
+  color: #00ff9c;
 }
 
-.confirm-btn{
-  width:100%;
-  padding:12px;
-  background:#00c27a;
-  border:none;
-  border-radius:8px;
-  font-weight:700;
-  cursor:pointer;
+.confirm-btn {
+  width: 100%;
+  padding: 12px;
+  background: #00c27a;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
 }
 
-/* =========================
-   QUICK LINKS
-========================= */
-.quick{
-  display:flex;
-  justify-content:center;
-  gap:30px;
-  margin-bottom:80px;
+/* =================================================
+   PAGE: TEAM
+================================================= */
+.page-team section {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border-radius: 0;
 }
 
-.quick a{
-  padding:12px 25px;
-  border:1px solid #c9a44c;
-  color:#c9a44c;
-  text-decoration:none;
-  border-radius:25px;
+.page-team .team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  padding: 40px;
 }
 
-.quick a:hover{
-  background:#c9a44c;
-  color:#000;
+/* =================================================
+   PAGE: NEWS
+================================================= */
+.page-news section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: none;
+  border-radius: 0;
+}
+
+.page-news .news-list {
+  padding: 0;
+}
+
+/* =================================================
+   QUICK LINKS (HOME)
+================================================= */
+.quick {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.quick a {
+  padding: 12px 25px;
+  border: 1px solid #c9a44c;
+  color: #c9a44c;
+  text-decoration: none;
+  border-radius: 25px;
+}
+
+.quick a:hover {
+  background: #c9a44c;
+  color: #000;
 }
