@@ -91,12 +91,12 @@ body::after {
   border-radius: 16px;
 }
 
-/* HERO */
-.hero {
+/* HERO – HOME ONLY */
+.page-home .hero{
   text-align: center;
 }
 
-.hero-logo {
+.page-home .hero-logo{
   width: 160px;
   margin-bottom: 20px;
 }
