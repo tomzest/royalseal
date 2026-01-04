@@ -335,6 +335,11 @@ html{
   line-height: 1.6;
 }
 
+.shop-header .section-title::after{
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 
 
