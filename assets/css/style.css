@@ -97,8 +97,8 @@ body::after {
 }
 
 .page-home .hero-logo{
-  width: 90px;
-  max-width: 28vw;     /* responsive */
+  width: 160px;
+  max-width: 40vw;     /* responsive */
   margin: 0 auto 20px; /* căn giữa */
   display: block;
 }
