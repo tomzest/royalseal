@@ -48,4 +48,23 @@ function closeOrder(){
   const modal = document.getElementById("orderModal");
   if(modal) modal.style.display = "none";
 }
+function openOrder(name, price){
+  const modal = document.getElementById("orderModal");
+  document.getElementById("productName").value = name;
+  document.getElementById("productPrice").innerText = price;
+  modal.style.display = "flex";
+}
+
+function closeOrder(){
+  const modal = document.getElementById("orderModal");
+  modal.style.display = "none";
+}
+
+/* click ra ngoài để đóng */
+window.addEventListener("click", function(e){
+  const modal = document.getElementById("orderModal");
+  if(e.target === modal){
+    modal.style.display = "none";
+  }
+});
 
