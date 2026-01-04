@@ -295,21 +295,57 @@ body::after {
 }
 
 /* =================================================
-   PAGE: TEAM
+   PAGE: TEAM (FIX CARD SIZE)
 ================================================= */
-.page-team section {
-  max-width: none;
-  margin: 0;
-  padding: 0;
-  background: none;
-  border-radius: 0;
-}
-
-.page-team .team-grid {
+.page-team .team-grid{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 24px;
-  padding: 40px;
+
+  /* 👇 CHỐT: không cho grid bung quá rộng */
+  max-width: 1100px;
+  margin: 0 auto 60px;
+  padding: 0 20px;
+}
+
+/* CARD */
+.page-team .member-card{
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 14px;
+  padding: 14px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.25s ease;
+
+  /* 👇 CHỐT KÍCH THƯỚC CARD */
+  max-width: 260px;
+  margin: 0 auto;
+}
+
+.page-team .member-card:hover{
+  border-color: #c9a44c;
+  transform: translateY(-6px);
+}
+
+/* ẢNH MEMBER */
+.page-team .member-card img{
+  width: 100%;
+  height: 220px;        /* 👈 giảm chiều cao */
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* MOBILE */
+@media (max-width: 768px){
+  .page-team .member-card{
+    max-width: 100%;
+  }
+
+  .page-team .member-card img{
+    height: 200px;
+  }
 }
 
 /* =================================================
