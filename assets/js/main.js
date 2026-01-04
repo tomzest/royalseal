@@ -27,3 +27,12 @@ modalContent.querySelector('.close-btn').onclick=()=>modal.style.display='none';
 g.appendChild(card);
 });
 });
+function openOrder(name, price){
+  document.getElementById("productName").value = name;
+  document.getElementById("productPrice").innerText = price;
+  document.getElementById("orderModal").style.display = "flex";
+}
+
+function closeOrder(){
+  document.getElementById("orderModal").style.display = "none";
+}
