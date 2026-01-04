@@ -499,30 +499,24 @@ body::after {
   }
 }
 /* =================================================
-   TEAM PROFILE – FULL IMAGE, SMALL SIZE
+   TEAM PROFILE IMAGE FIX (ANTI FULLSCREEN)
 ================================================= */
 
 /* khung ảnh */
 #profileModal .profile-image{
   width: 100%;
-  max-width: 320px;      /* 👈 giữ modal nhỏ */
-  max-height: 420px;     /* 👈 giới hạn tổng chiều cao */
+  max-width: 300px;
+  height: 360px;              /* 👈 chiều cao cố định */
   margin: 0 auto 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #0f0f0f;
-  border-radius: 14px;
   overflow: hidden;
+  border-radius: 14px;
 }
 
-/* ảnh bên trong – HIỆN FULL */
+/* ảnh bên trong */
 #profileModal .profile-image img{
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-  object-fit: contain;   /* 👈 CHỐT: KHÔNG CROP */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* 👈 CHỐT: không tràn */
   display: block;
 }
 
