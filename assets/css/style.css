@@ -579,4 +579,13 @@ html{
   pointer-events: none !important;
 }
 
+section{
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  position: relative !important;
+  height: auto !important;
+  overflow: visible !important;
+}
+
 
