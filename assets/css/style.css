@@ -368,6 +368,33 @@ html{
   }
 }
 
+/* MERCH GRID – MAX 4 PER ROW */
+#merch .grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* Tablet */
+@media (max-width: 1024px){
+  #merch .grid{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px){
+  #merch .grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px){
+  #merch .grid{
+    grid-template-columns: 1fr;
+  }
+}
 
 
 
