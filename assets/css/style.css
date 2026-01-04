@@ -395,6 +395,21 @@ html{
     grid-template-columns: 1fr;
   }
 }
+/* MERCH HEADER CENTER */
+.merch-section{
+  text-align: center;
+}
+
+.merch-header{
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+}
+
+.merch-header p{
+  color: #b0b0b0;
+  line-height: 1.6;
+}
+
 
 
 
