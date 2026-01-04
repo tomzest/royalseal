@@ -290,5 +290,26 @@ body::after {
   }
 }
 
+/* ===== PRODUCT BADGE ===== */
+.badge{
+  position:absolute;
+  top:12px;
+  left:12px;
+  padding:6px 10px;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:1px;
+  border-radius:3px;
+}
+
+.badge.hot{ background:#b11226; color:#fff; }
+.badge.new{ background:#d4af37; color:#000; }
+.badge.limited{ background:#444; color:#fff; }
+
+.product{
+  position:relative;
+}
+
+
 
 
