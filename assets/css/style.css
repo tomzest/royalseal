@@ -428,3 +428,74 @@ body::after {
   }
 }
 
+/* =================================================
+   TEAM PROFILE MODAL – FINAL FIX
+================================================= */
+
+/* overlay */
+#profileModal{
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  z-index: 3000;
+  justify-content: center;
+  align-items: center;
+}
+
+/* box */
+#profileModal .modal-content{
+  background: #111;
+  border: 1px solid #c9a44c;
+  border-radius: 16px;
+  padding: 20px;
+
+  /* 👇 CHỐT: KHÓA KÍCH THƯỚC */
+  width: 90%;
+  max-width: 360px;
+
+  text-align: center;
+}
+
+/* image */
+#profileModal .modal-content img{
+  width: 100%;
+  height: 240px;       /* 👈 ép chiều cao */
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 14px;
+}
+
+/* name */
+#profileModal .modal-content h2{
+  margin: 6px 0;
+  font-size: 18px;
+  color: #c9a44c;
+}
+
+/* role / text */
+#profileModal .modal-content p{
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* close button */
+#profileModal .close-btn{
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #c9a44c;
+}
+
+/* mobile */
+@media (max-width: 480px){
+  #profileModal .modal-content{
+    max-width: 92%;
+  }
+
+  #profileModal .modal-content img{
+    height: 200px;
+  }
+}
+
