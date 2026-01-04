@@ -57,6 +57,49 @@ document.querySelectorAll(".nav-links a").forEach(link => {
   }
 });
 </script>
+<!-- ORDER MODAL -->
+<div id="orderModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeOrder()">×</span>
+
+    <h3>XÁC NHẬN ĐẶT HÀNG</h3>
+
+    <div class="order-section">
+      <label>Sản phẩm</label>
+      <input type="text" id="productName" readonly>
+    </div>
+
+    <div class="order-section">
+      <label>Nhập mã giảm giá</label>
+      <div class="discount-box">
+        <input type="text" placeholder="NHẬP MÃ GIẢM GIÁ">
+        <button>Áp dụng</button>
+      </div>
+    </div>
+
+    <div class="order-total">
+      Tổng thanh toán: <strong id="productPrice">0đ</strong>
+    </div>
+
+    <div class="order-section">
+      <label>Tên người nhận</label>
+      <input type="text" placeholder="Tên người nhận">
+    </div>
+
+    <div class="order-section">
+      <label>Số điện thoại</label>
+      <input type="text" placeholder="Số điện thoại">
+    </div>
+
+    <div class="order-section">
+      <label>Địa chỉ</label>
+      <input type="text" placeholder="Địa chỉ">
+    </div>
+
+    <button class="confirm-btn">XÁC NHẬN ĐẶT HÀNG</button>
+  </div>
+</div>
+
 </body>
 </html>
 <section id="shop" class="reveal shop-section">
