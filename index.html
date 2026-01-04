@@ -36,27 +36,7 @@
     Chúng tôi không tìm kiếm sự nổi tiếng – chúng tôi xây dựng chiến thắng.
   </p>
 </section>
-
-<!-- QUICK LINKS -->
-<section class="quick">
-  <a href="team.html">Xem đội hình</a>
-  <a href="news.html">Xem thông báo</a>
-</section>
-<script>
-function toggleMenu() {
-  document.getElementById("navLinks").classList.toggle("show");
-}
-</script>
-<script>
-const currentPage = window.location.pathname.split("/").pop();
-
-document.querySelectorAll(".nav-links a").forEach(link => {
-  const linkPage = link.getAttribute("href");
-  if (linkPage === currentPage) {
-    link.classList.add("active");
-  }
-});
-</script>
+  
 <!-- ORDER MODAL -->
 <div id="orderModal" class="modal">
   <div class="modal-content">
@@ -190,4 +170,25 @@ document.querySelectorAll(".nav-links a").forEach(link => {
 
   </div>
 </section>
+<!-- QUICK LINKS -->
+<section class="quick">
+  <a href="team.html">Xem đội hình</a>
+  <a href="news.html">Xem thông báo</a>
+</section>
+<script>
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("show");
+}
+</script>
+<script>
+const currentPage = window.location.pathname.split("/").pop();
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+  const linkPage = link.getAttribute("href");
+  if (linkPage === currentPage) {
+    link.classList.add("active");
+  }
+});
+</script>
+
 
