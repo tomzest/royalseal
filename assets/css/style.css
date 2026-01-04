@@ -518,6 +518,14 @@ html{
   cursor:pointer;
 }
 
+.product *{
+  pointer-events: auto;
+}
+
+.product::before,
+.product::after{
+  pointer-events: none;
+}
 
 
 
