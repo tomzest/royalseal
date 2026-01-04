@@ -233,14 +233,13 @@ section{
    MODAL
 ========================= */
 .modal{
-  display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,0.7);
-  z-index:2000;
-  display:flex;
-  justify-content:center;
-  align-items:center;
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-content{
