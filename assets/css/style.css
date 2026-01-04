@@ -349,3 +349,46 @@ body::after {
   background: #c9a44c;
   color: #000;
 }
+
+/* =====================================
+   PAGE HEADER – TEAM & NEWS
+===================================== */
+.page-team .page-header,
+.page-news .page-header{
+  max-width: 1200px;
+  margin: 40px auto 30px;
+  padding: 20px;
+  text-align: center; /* 👈 căn giữa toàn bộ text */
+}
+
+/* LOGO NHỎ */
+.page-team .page-logo,
+.page-news .page-logo{
+  width: 80px;          /* 👈 nhỏ gọn */
+  max-width: 26vw;      /* responsive */
+  display: block;
+  margin: 0 auto 14px; /* căn giữa */
+}
+
+/* TITLE */
+.page-team .page-header h1,
+.page-news .page-header h1{
+  margin: 0;
+  color: #c9a44c;
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+/* MOBILE TUNE */
+@media (max-width: 480px){
+  .page-team .page-logo,
+  .page-news .page-logo{
+    width: 64px;
+  }
+
+  .page-team .page-header h1,
+  .page-news .page-header h1{
+    font-size: 22px;
+  }
+}
+
