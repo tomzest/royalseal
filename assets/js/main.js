@@ -27,12 +27,25 @@ modalContent.querySelector('.close-btn').onclick=()=>modal.style.display='none';
 g.appendChild(card);
 });
 });
+
 function openOrder(name, price){
-  document.getElementById("productName").value = name;
-  document.getElementById("productPrice").innerText = price;
-  document.getElementById("orderModal").style.display = "flex";
+  const modal = document.getElementById("orderModal");
+  if(!modal){
+    alert("Không tìm thấy modal");
+    return;
+  }
+
+  const nameInput = document.getElementById("productName");
+  const priceText = document.getElementById("productPrice");
+
+  if(nameInput) nameInput.value = name;
+  if(priceText) priceText.innerText = price;
+
+  modal.style.display = "flex";
 }
 
 function closeOrder(){
-  document.getElementById("orderModal").style.display = "none";
+  const modal = document.getElementById("orderModal");
+  if(modal) modal.style.display = "none";
 }
+
